@@ -1,0 +1,119 @@
+@import "colors";
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='375' height='194'%3E%3Cpath fill='%23D6E1FF' fill-rule='evenodd' d='M-131.808 155.366c97.026 51.512 204.233 51.512 321.62 0 117.388-51.512 223.27-51.512 317.648 0V0h-639.268v155.366z'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $color-background;
+  font-size: 16px;
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-background-card;
+    width: 80%;
+    min-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    .main_img {
+      img {
+        width: 100%;
+      }
+    }
+    .main_info {
+      width: 90%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      align-items: center;
+      text-align: center;
+      h1 {
+        font-weight: 900;
+        margin: 1rem auto 0 auto;
+      }
+      p {
+        color: $color-text;
+        font-weight: 700;
+      }
+      .plan_info {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 80px;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+        .divider {
+          display: flex;
+          flex-direction: row;
+          img {
+            margin-left: 1em;
+            width: 50px;
+            height: 50px;
+          }
+          .pricing {
+            display: flex;
+            flex-direction: column;
+            margin-left: 1em;
+            p {
+              margin: 0;
+            }
+          }
+        }
+
+        a {
+          margin-right: 1em;
+          font-weight: 700;
+          color: $color-links;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+            color: $color-hover;
+          }
+        }
+      }
+      button {
+        margin-top: 2em;
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+        background-color: $color-links;
+        text-align: center;
+        color: $color-background-card;
+        font-weight: 700;
+        border-style: none;
+        box-shadow: 0 10px 20px hsl(244, 37%, 64%);
+        &:hover {
+          background-color: $color-hover;
+          cursor: pointer;
+        }
+      }
+      a {
+        margin: 1em auto;
+        font-weight: 900;
+        text-decoration: none;
+        color: $color-text;
+        &:hover {
+          color: hsl(223, 47%, 23%);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='437'%3E%3Cpath fill='%23D6E1FF' fill-rule='evenodd' d='M0 349.974c218.558 116.035 460.05 116.035 724.475 0s502.933-116.035 715.525 0V0H0v349.974z'/%3E%3C/svg%3E");
+    main {
+      width: 300px;
+    }
+  }
+}
